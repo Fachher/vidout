@@ -1,7 +1,7 @@
 #VERBOSE=1
 #DEBUG ?= 1
-CROSS_COMPILE ?= $(HOME)/bin/armgcc/bin/arm-none-eabi-
-
+#CROSS_COMPILE ?= $(HOME)/bin/armgcc/bin/arm-none-eabi-
+CROSS_COMPILE ?= /usr/local/Cellar/gcc-arm-none-eabi/20171218/bin/arm-none-eabi-
 ##########################################################################
 # User configuration and firmware specific object files
 ##########################################################################
@@ -158,7 +158,7 @@ clean:
 	$(Q)-rm -rf TAGS
 
 flash:	build
-	$(Q) $(DEBUGGER)   $(DEBUGSCRIPT) 2> /dev/null &
+	JLinkExe -device STM32F103C8 -If SWD -CommanderScript flashstm32.jlink
 
 print-%:
 	@echo $* is $($*)

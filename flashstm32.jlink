@@ -1,0 +1,4 @@
+speed 400
+r
+h
+loadbin ofiles/firmware.bin , 0
