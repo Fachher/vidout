@@ -1,7 +1,7 @@
 #VERBOSE=1
 #DEBUG ?= 1
 #CROSS_COMPILE ?= $(HOME)/bin/armgcc/bin/arm-none-eabi-
-CROSS_COMPILE ?= /usr/local/Cellar/gcc-arm-none-eabi/20171218/bin/arm-none-eabi-
+CROSS_COMPILE ?= /usr/bin/arm-none-eabi-
 ##########################################################################
 # User configuration and firmware specific object files
 ##########################################################################
